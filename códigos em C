@@ -1,0 +1,386 @@
+EXERCICIOS
+
+******************************************************************************
+OBS.: Todos os programa devem ser finalizados pelo usuario.
+
+1 - As ligacoes telefonicas são cobradas pela sua duracao. O sistema registra os
+    instantes em que a ligacao foi iniciada e concluida.
+    Escreva um programa que recebe via teclado dois instantes dados em
+    horas, minutos e segundo e determina o intervalo de tempo
+    (em horas, minutos e segundos) decorrido entre eles.
+
+2 - Escreva um programa para adivinhar um numero entre 1 e 99 que o usuario
+    pensou. Digite via teclado os simbolos =, > ou < a cada pergunta. Utilize o
+    comando if-else.
+
+3 - Reescreva o programa do exercicio anterior agora utilizando o comando switch.
+    Conte o n. de tentativas e imprima o resultado no video.
+
+4 - Escreva um programa que receba via teclado numeros inteiros positivos.
+    Quando o numero digitado for negativo o programa deve parar e calcula a
+    media dos valores positivos digitados.
+
+
+5 - Receba via teclado a distancia em km e a quantidade de litros de gasolina    consumidos por um carro em um percurso.
+    Calcule o consumo em km/l e escreva uma mensagem de acordo com a tabela
+    abaixo:
+    CONSUMO (km/l) MENSAGEM
+    menor que 8    Venda o carro!
+    entre 8 e 14   Economico!
+    maior que 14   Super economico!
+*/
+
+
+#define ex5
+
+
+#ifdef ex1
+
+
+//As ligacoes telefonicas são cobradas pela sua duracao. O sistema registra os instantes em que a ligacao foi iniciada e concluida.
+//Escreva um programa que recebe via teclado dois instantes dados em horas, minutos e segundo e determina o intervalo de tempo
+//(em horas, minutos e segundos) decorrido entre eles.
+
+
+#include<stdio.h>
+#include<locale.h>
+
+
+int main()
+
+{
+
+setlocale(LC_ALL,"Portuguese");
+
+int a,b,c,d,e,f;//tempo inicial
+
+int x,y,z,w,j,k;//tempo final
+
+int tempo;//variável que contem o tempo em seg//
+
+int m,n,o;//variaveis para o calculo de conversao//
+
+char t;
+
+do{
+
+do{
+
+printf("Digite o tempo inical da ligacao em horas:\n");
+scanf("%d",&a);}while((a<0)||(a>23));
+
+do{
+printf("Digite o tempo inicial da ligacao em min:\n");
+scanf("%d",&b);}while((b<0)||(b>59));
+
+do{
+printf("Digite o tempo inicial da ligacao em seg:\n");
+scanf("%d",&c);}while((c<0)||(c>59));
+
+printf("O tempo inicial da ligacao em horas, minutos e segundos é:\n %dh %dmin %dseg\n",a,b,c);
+
+
+           //conversao do tempo inicial para segundos//
+
+
+
+d=a*3600;//horas em segundos//
+
+e=b*60;//minutos em seg//
+
+f=d+e+c;//tempo inicial em seg//
+
+
+        //calculo do tempo final//
+
+
+do{
+printf("Digite o tempo final da ligacao em horas:\n");
+scanf("%d",&x);}while((x<0)||(x>23));
+
+do{
+printf("Digite o tempo final da ligacao em min:\n");
+scanf("%d",&y);}while((y<0)||(y>59));
+
+do{
+printf("Digite o tempo final da ligacao em seg:\n");
+scanf("%d",&z);}while((z<0)||(z>59));
+
+printf("O tempo final da ligacao em horas, minutos e segundos é:\n %dh %dmin %dseg\n",x,y,z);
+
+
+
+        //conversao do tempo final para segundos//
+
+
+w=x*3600;//horas em segundos//
+
+j=y*60;//minutos em seg//
+
+k=w+j+z;//tempo final em seg//
+
+
+        //calculo da intervalo de tempo em seg//
+
+
+tempo=k-f;//itervalo em segundos//
+
+        //conversao do intervalo para h,min e seg//
+
+
+m = tempo/3600;//tempo em horas//
+
+n = tempo/60-m*60;//tempo em min//
+
+o = tempo-(m*3600+n*60);//tempo em seg//
+
+//printf("O tempo inicial em segundo é: %dseg\n",f);
+
+//printf("O tempo final em segundos é: %dseg\n",k);
+
+//printf("O intervalo de tempo entre as ligacoes em segundos é: %dseg\n",tempo);
+
+printf("O intervalo de tempo entre as ligacoes em horas, min e seg é: \n %dh %dmin %dseg\n",m,n,o);
+
+
+
+              //*Comando para sair ou continuar no laço*//
+
+do
+{
+    printf("Deseja continuar?(S/N)\n");
+    printf("Se sim aperte S; se não aperte N.\n");
+    scanf("%c", &t);
+    t=getchar();
+    getchar();
+
+}while(t!='s' && t!='n');
+
+}while(t=='s');
+
+
+}
+
+#endif // ex1
+
+#ifdef ex2
+
+//Escreva um programa para adivinhar um numero entre 1 e 99 que o usuariopensou. Digite via teclado os simbolos =, > ou < a cada pergunta. Utilize o comando if-else.//
+
+
+#include<stdio.h>
+#include<locale.h>
+
+int main()
+
+{
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+#endif // ex2
+
+
+
+#ifdef ex3
+
+//Reescreva o programa do exercicio anterior agora utilizando o comando switch. Conte o n. de tentativas e imprima o resultado no video.//
+
+
+#include<stdio.h>
+#include<locale.h>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#endif // ex3
+
+
+#ifdef ex4
+
+
+//Escreva um programa que receba via teclado numeros inteiros positivos. Quando o numero digitado for negativo o programa deve parar e calcula a
+//media dos valores positivos digitados.//
+
+
+
+#include<stdio.h>
+#include<locale.h>
+
+
+int main()
+
+{
+    setlocale(LC_ALL,"Portuguese");
+
+    int a;//numeros inteiros positivos digitados pelo usuário//
+    int i;
+    int soma;//acumulador//
+    soma=0;
+    float media;
+    char x;
+
+
+    do{
+
+    printf("Digite números inteiros positivos\n");
+
+    for(i=0;;i++)
+
+    {
+
+    scanf("%d",&a);
+
+
+    if(a<0)
+
+    {
+        break;
+    }
+
+    soma=soma+a;
+
+    }
+
+    media=(float)soma/(float)i; //usar correcao das variáveis para o momento do cálculo para que o resultado seja em float//
+
+    printf("\n\n");
+    printf("A media aritmética dos valores digitados é: %g\n\n",media);
+
+
+
+        //*Comando para sair ou continuar no laço*//
+
+
+
+do
+
+
+{
+    printf("\n Deseja continuar?(S/N)\n");
+    printf("\n Se sim aperte S; se não aperte N.\n");
+    scanf("%c", &x);
+    x=getchar();
+    getchar();
+
+
+}while(x!='s' && x!='n');
+
+
+}while(x=='s');
+
+
+}
+
+#endif // ex4
+
+
+#ifdef ex5
+
+//    Receba via teclado a distancia em km e a quantidade de litros de gasolina consumidos por um carro em um percurso.
+//    Calcule o consumo em km/l e escreva uma mensagem de acordo com a tabela abaixo:
+//    CONSUMO (km/l) MENSAGEM
+//    menor que 8    Venda o carro!
+//    entre 8 e 14   Economico!
+//    maior que 14   Super economico!
+
+#include<stdio.h>
+#include<locale.h>
+
+int main()
+
+{
+
+    setlocale(LC_ALL,"Portuguese");
+
+    float d;//variável da distancia em Km //
+    float l;//variável do consumo Km/l //
+    float x;//consumo de combustível//
+    char k;
+
+
+
+    do{
+
+
+    do{
+    printf("Digite a distancia em Km durante o percurso\n");
+    scanf("%f",&d);}while(d<0);
+
+    do{
+    printf("Digite a quantidade de litros de gasolina consumidos durante o percurso\n");
+    scanf("%f",&l);}while(l<0);
+
+
+    x=d/l;
+
+
+    printf("O Consumo de combustível é: %g Km/l \n\n",x);
+
+    if(x<8)
+
+    {
+        printf("Venda o carro\n\n");
+
+
+    }
+
+    if((x>=8)&&(x<=14))
+
+    {
+        printf("Carro enconômico\n\n");
+
+    }
+
+    if(x>14)
+
+    {
+       printf("Carro super-econômico\n\n");
+
+    }
+
+    //*Comando para sair ou continuar no laço*//
+
+do
+
+{
+    printf("\nDeseja continuar?(S/N)\n");
+    printf("\nSe sim aperte S; se não aperte N.\n");
+    scanf("%c", &k);
+    k=getchar();
+    getchar();
+
+    }while(k!='s' && k!='n');
+
+}while(k=='s');
+
+
+}
+
+#endif // ex5
+
